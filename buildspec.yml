@@ -5,11 +5,11 @@ phases:
     commands:
       - echo Installing NGINX
       - sudo yum update -y
-      - sudo yum install httpd -y
+      - sudo yum install nginx -y
   build:
     commands:
       - echo Build started on `date`
-      - cp index.html /var/www/html/
+      - cp index.html /usr/share/nginx/html
   post_build:
     commands:
       - echo Configuring NGINX
